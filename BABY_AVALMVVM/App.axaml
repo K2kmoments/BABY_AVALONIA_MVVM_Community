@@ -1,0 +1,18 @@
+<Application
+    RequestedThemeVariant="Light"
+    x:Class="BABY_AVALMVVM.App"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:local="using:BABY_AVALMVVM"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <!--  "Default" ThemeVariant follows system theme variant. "Dark" or "Light" are other available options.  -->
+
+    <Application.DataTemplates>
+        <local:ViewLocator />
+    </Application.DataTemplates>
+
+    <Application.Styles>
+        <FluentTheme />
+        <!--  LINK ICON STYLE HERE (SyleInclude)  -->
+        <StyleInclude Source="avares://BABY_AVALMVVM/Assets/Icons.axaml" />
+    </Application.Styles>
+</Application>

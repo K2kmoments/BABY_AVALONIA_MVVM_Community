@@ -1,0 +1,66 @@
+<UserControl
+    Background="#454545"
+    d:DesignHeight="720"
+    d:DesignWidth="1200"
+    mc:Ignorable="d"
+    x:Class="BABY_AVALMVVM.Views.PooPooView"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <StackPanel Orientation="Vertical" Spacing="4">
+        <Label
+            Content="Choose PooPoo Colour"
+            FontSize="35"
+            Foreground="MistyRose"
+            HorizontalAlignment="Center" />
+        <Grid
+            ColumnDefinitions="Auto,*,Auto"
+            HorizontalAlignment="Stretch"
+            Margin="0,16,0,0"
+            MaxWidth="660">
+            <Button
+                Background="MistyRose"
+                Grid.Column="0"
+                Margin="4"
+                Name="left"
+                Padding="10,20"
+                VerticalAlignment="Center"
+                Width="50">
+                <Path Data="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" Fill="Black" />
+            </Button>
+            <Carousel Grid.Column="1" Name="carousel">
+                <Carousel.PageTransition>
+                    <PageSlide Duration="0.25" Orientation="Horizontal" />
+                </Carousel.PageTransition>
+                <Image Source="/Assets/PooPoo/brownPoo.png" />
+                <Image Source="/Assets/PooPoo/yellowPoo.png" />
+                <Image Source="/Assets/PooPoo/greenPoo.png" />
+                <Image Source="/Assets/PooPoo/orangePoo.png" />
+                <Image Source="/Assets/PooPoo/darkPoo.png" />
+            </Carousel>
+            <Button
+                Background="MistyRose"
+                Grid.Column="2"
+                Margin="4"
+                Name="right"
+                Padding="10,20"
+                VerticalAlignment="Center"
+                Width="50">
+                <Path Data="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z" Fill="Black" />
+            </Button>
+        </Grid>
+        <Button
+            Background="MistyRose"
+            Content="Save"
+            Height="50"
+            HorizontalAlignment="Center"
+            HorizontalContentAlignment="Center"
+            VerticalContentAlignment="Center"
+            Width="150" />
+
+
+
+
+    </StackPanel>
+</UserControl>

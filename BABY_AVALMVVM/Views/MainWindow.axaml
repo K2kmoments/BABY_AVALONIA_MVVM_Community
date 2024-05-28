@@ -1,0 +1,68 @@
+<Window
+    Icon="/Assets/avalonia-logo.ico"
+    Title="BABY_AVALMVVM"
+    d:DesignHeight="450"
+    d:DesignWidth="800"
+    mc:Ignorable="d"
+    x:Class="BABY_AVALMVVM.Views.MainWindow"
+    x:DataType="vm:MainWindowViewModel"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:vm="using:BABY_AVALMVVM.ViewModels"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Design.DataContext>
+        <!--
+            This only sets the DataContext for the previewer in an IDE,
+            to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs)
+        -->
+        <vm:MainWindowViewModel />
+    </Design.DataContext>
+
+    <SplitView
+        Background="#252525"
+        CompactPaneLength="53"
+        DisplayMode="CompactInline"
+        IsPaneOpen="{Binding IsPanelOpen}"
+        OpenPaneLength="150"
+        PaneBackground="#252525">
+        <SplitView.Pane>
+            <StackPanel
+                HorizontalAlignment="Left"
+                Margin="5"
+                Spacing="5">
+                <Button
+                    Command="{Binding TriggerPaneCommand}"
+                    Foreground="MistyRose"
+                    VerticalAlignment="Top">
+                    <PathIcon Data="{StaticResource LineHorizontal3Regular}" Foreground="MistyRose" />
+                </Button>
+                <ListBox
+                    Background="Transparent"
+                    ItemsSource="{Binding PagesInNavigation}"
+                    SelectedItem="{Binding SelectedListItem}">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate DataType="{x:Type vm:NavItemTemplate}">
+                            <StackPanel Orientation="Horizontal" Spacing="15">
+                                <PathIcon Data="{Binding ListItemIcon}" Foreground="MistyRose" />
+                                <Label Content="{Binding VisibleName}" Foreground="MistyRose" />
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+            </StackPanel>
+        </SplitView.Pane>
+
+        <SplitView.Content>
+            <Border
+                Background="MistyRose"
+                CornerRadius="10,10,10,10"
+                Margin="10">
+                <TransitioningContentControl Content="{Binding CurrentPage}" />
+            </Border>
+
+        </SplitView.Content>
+    </SplitView>
+
+</Window>

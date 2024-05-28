@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AvaloniaProject">
+    <option name="projectPerEditor">
+      <map>
+        <entry key="BABY_AVALMVVM/App.axaml" value="BABY_AVALMVVM/BABY_AVALMVVM.csproj" />
+        <entry key="BABY_AVALMVVM/Assets/Icons.axaml" value="BABY_AVALMVVM/BABY_AVALMVVM.csproj" />
+        <entry key="BABY_AVALMVVM/Views/DoctorView.axaml" value="BABY_AVALMVVM/BABY_AVALMVVM.csproj" />
+        <entry key="BABY_AVALMVVM/Views/ExerciseView.axaml" value="BABY_AVALMVVM/BABY_AVALMVVM.csproj" />
+        <entry key="BABY_AVALMVVM/Views/FeedingView.axaml" value="BABY_AVALMVVM/BABY_AVALMVVM.csproj" />
+        <entry key="BABY_AVALMVVM/Views/HomeView.axaml" value="BABY_AVALMVVM/BABY_AVALMVVM.csproj" />
+        <entry key="BABY_AVALMVVM/Views/MainWindow.axaml" value="BABY_AVALMVVM/BABY_AVALMVVM.csproj" />
+        <entry key="BABY_AVALMVVM/Views/PhotoView.axaml" value="BABY_AVALMVVM/BABY_AVALMVVM.csproj" />
+        <entry key="BABY_AVALMVVM/Views/PooPooView.axaml" value="BABY_AVALMVVM/BABY_AVALMVVM.csproj" />
+        <entry key="BABY_AVALMVVM/Views/SleepView.axaml" value="BABY_AVALMVVM/BABY_AVALMVVM.csproj" />
+      </map>
+    </option>
+  </component>
+</project>
