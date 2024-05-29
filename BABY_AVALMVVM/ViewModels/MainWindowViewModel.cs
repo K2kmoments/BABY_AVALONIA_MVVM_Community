@@ -3,7 +3,7 @@ using System.Collections.ObjectModel;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 
-namespace BABY_AVALMVVM.ViewModels;
+namespace BABY_AVALONIA_MVVM.ViewModels;
 
 public partial class MainWindowViewModel : ViewModelBase
 {

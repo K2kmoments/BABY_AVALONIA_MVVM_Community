@@ -3,10 +3,10 @@ using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Data.Core;
 using Avalonia.Data.Core.Plugins;
 using Avalonia.Markup.Xaml;
-using BABY_AVALMVVM.ViewModels;
-using BABY_AVALMVVM.Views;
+using BABY_AVALONIA_MVVM.ViewModels;
+using BABY_AVALONIA_MVVM.Views;
 
-namespace BABY_AVALMVVM;
+namespace BABY_AVALONIA_MVVM;
 
 public partial class App : Application
 {

@@ -3,15 +3,10 @@ using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Media;
 
-namespace BABY_AVALMVVM.ViewModels;
+namespace BABY_AVALONIA_MVVM.ViewModels;
 
 public class LogItemTemplate
 {
-    
-    public string Label { get; }
-    public Type LogEntryType { get; }
-    public StreamGeometry LogItemIcon { get; set; }
-
     public LogItemTemplate(Type modelType, string visibleName, string iconKey)
     {
         LogEntryType = modelType;
@@ -21,4 +16,8 @@ public class LogItemTemplate
         Application.Current!.TryFindResource(iconKey, out var res);
         LogItemIcon = (StreamGeometry)res!;
     }
+
+    public string Label { get; }
+    public Type LogEntryType { get; }
+    public StreamGeometry LogItemIcon { get; set; }
 }

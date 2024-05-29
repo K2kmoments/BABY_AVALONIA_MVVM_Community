@@ -2,7 +2,7 @@
     d:DesignHeight="450"
     d:DesignWidth="800"
     mc:Ignorable="d"
-    x:Class="BABY_AVALMVVM.Views.SleepView"
+    x:Class="BABY_AVALONIA_MVVM.Views.SleepView"
     xmlns="https://github.com/avaloniaui"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"

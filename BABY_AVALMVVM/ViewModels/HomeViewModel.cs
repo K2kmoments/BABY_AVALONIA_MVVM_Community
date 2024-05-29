@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Threading;
 using Avalonia.Controls;
-using BABY_AVALMVVM.Models;
-using BABY_AVALMVVM.ViewModels.Helper;
+using BABY_AVALONIA_MVVM.Models;
+using BABY_AVALONIA_MVVM.ViewModels.Helper;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 
-namespace BABY_AVALMVVM.ViewModels;
+namespace BABY_AVALONIA_MVVM.ViewModels;
 
 public partial class HomeViewModel : ViewModelBase
 {

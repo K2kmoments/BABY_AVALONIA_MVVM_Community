@@ -1,10 +1,10 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-using BABY_AVALMVVM.Models;
+using BABY_AVALONIA_MVVM.Models;
 using SQLite;
 
-namespace BABY_AVALMVVM.ViewModels.Helper;
+namespace BABY_AVALONIA_MVVM.ViewModels.Helper;
 
 public static class SqLiteHelper
 {

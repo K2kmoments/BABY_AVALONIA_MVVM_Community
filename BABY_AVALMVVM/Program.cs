@@ -1,7 +1,7 @@
 ﻿using Avalonia;
 using System;
 
-namespace BABY_AVALMVVM;
+namespace BABY_AVALONIA_MVVM;
 
 sealed class Program
 {

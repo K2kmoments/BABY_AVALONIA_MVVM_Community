@@ -3,7 +3,7 @@
     d:DesignHeight="720"
     d:DesignWidth="1200"
     mc:Ignorable="d"
-    x:Class="BABY_AVALMVVM.Views.PooPooView"
+    x:Class="BABY_AVALONIA_MVVM.Views.PooPooView"
     xmlns="https://github.com/avaloniaui"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"

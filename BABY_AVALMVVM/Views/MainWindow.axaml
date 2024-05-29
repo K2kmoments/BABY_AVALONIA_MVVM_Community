@@ -1,15 +1,17 @@
 <Window
+    Height="720"
     Icon="/Assets/avalonia-logo.ico"
     Title="BABY_AVALMVVM"
-    d:DesignHeight="450"
-    d:DesignWidth="800"
+    Width="1280"
+    d:DesignHeight="720"
+    d:DesignWidth="1280"
     mc:Ignorable="d"
-    x:Class="BABY_AVALMVVM.Views.MainWindow"
+    x:Class="BABY_AVALONIA_MVVM.Views.MainWindow"
     x:DataType="vm:MainWindowViewModel"
     xmlns="https://github.com/avaloniaui"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:vm="using:BABY_AVALMVVM.ViewModels"
+    xmlns:vm="using:BABY_AVALONIA_MVVM.ViewModels"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
     <Design.DataContext>
@@ -38,6 +40,8 @@
                     VerticalAlignment="Top">
                     <PathIcon Data="{StaticResource LineHorizontal3Regular}" Foreground="MistyRose" />
                 </Button>
+
+                <Label />
                 <ListBox
                     Background="Transparent"
                     ItemsSource="{Binding PagesInNavigation}"
@@ -52,12 +56,16 @@
                     </ListBox.ItemTemplate>
                 </ListBox>
             </StackPanel>
+
         </SplitView.Pane>
 
         <SplitView.Content>
+
+
             <Border
-                Background="MistyRose"
+                Background="#252525"
                 CornerRadius="10,10,10,10"
+                Grid.Row="0"
                 Margin="10">
                 <TransitioningContentControl Content="{Binding CurrentPage}" />
             </Border>

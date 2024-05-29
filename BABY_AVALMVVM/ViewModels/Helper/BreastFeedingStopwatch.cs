@@ -3,9 +3,9 @@ using System.Diagnostics;
 using System.Timers;
 using Avalonia.Threading;
 
-namespace BABY_AVALMVVM.ViewModels.Helper;
+namespace BABY_AVALONIA_MVVM.ViewModels.Helper;
 
-public class ObsFeedingStopwatch
+public class BreastFeedingStopwatch
 {
     public FeedingViewModel Vm { get; set; }
    
@@ -23,7 +23,7 @@ public class ObsFeedingStopwatch
     public string? RightTimerString { get; private set; }
     private TimeSpan TotalTimeFeeded { get; set; }
 
-    public ObsFeedingStopwatch(FeedingViewModel vm)
+    public BreastFeedingStopwatch(FeedingViewModel vm)
     {
         //Initialize LEFT TimerComponents
         _stopwatchLeft = new Stopwatch();
