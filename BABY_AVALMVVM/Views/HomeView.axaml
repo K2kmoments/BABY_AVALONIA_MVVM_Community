@@ -47,35 +47,47 @@
                     WrapSelection="True">
                     <ListBox.ItemTemplate>
                         <DataTemplate>
-                            <Grid ColumnDefinitions="40,120,2*,*">
+                            <Grid ColumnDefinitions="50,Auto,*,2*">
                                 <PathIcon
-                                    Data="{StaticResource FoodRegular}"
+                                    Data="{StaticResource NoteRegular}"
                                     Height="30"
-                                    Width="100" />
+                                    Width="30" />
                                 <StackPanel
                                     Grid.Column="1"
                                     Margin="15,0,0,0"
                                     Spacing="5">
                                     <TextBlock
                                         FontSize="15"
+                                        FontWeight="Black"
                                         Grid.Column="1"
                                         Name="Name"
                                         Text="{Binding Name}" />
                                     <TextBlock
-                                        FontSize="10"
+                                        FontSize="12"
                                         Name="CreateTime"
                                         Text="{Binding LogCreationDateTime}" />
                                 </StackPanel>
+                                <StackPanel Grid.Column="2" Spacing="5">
+                                    <TextBlock
+                                        FontWeight="Black"
+                                        Margin="50,0,0,0"
+                                        Text="Duration" />
+                                    <TextBlock
+                                        Margin="50,0,0,0"
+                                        Name="Duration"
+                                        Text="{Binding Duration}" />
+                                </StackPanel>
+                                <StackPanel Grid.Column="3" Spacing="5">
+                                    <TextBlock
+                                        FontWeight="Black"
+                                        Margin="0,0,0,0"
+                                        Text="Note" />
+                                    <TextBlock
+                                        Grid.Column="3"
+                                        Name="LastSideFed"
+                                        Text="{Binding Note}" />
+                                </StackPanel>
 
-                                <TextBlock
-                                    Grid.Column="2"
-                                    Margin="50,0,0,0"
-                                    Name="DurationFed"
-                                    Text="{Binding FullDurationFed}" />
-                                <TextBlock
-                                    Grid.Column="3"
-                                    Name="LastSideFed"
-                                    Text="{Binding LastSideFed}" />
 
 
                             </Grid>

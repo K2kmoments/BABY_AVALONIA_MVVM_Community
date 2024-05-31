@@ -13,9 +13,9 @@ namespace BABY_AVALONIA_MVVM.ViewModels;
 public partial class HomeViewModel : ViewModelBase
 {
 
-     [ObservableProperty] private List<BabyLogDatabaseEntry>? _feedingDatabaseEntries;
+     [ObservableProperty] private List<LogItemTemplate>? _feedingDatabaseEntries;
      
-     [ObservableProperty] private BabyLogDatabaseEntry _selectedDatabaseEntry = null!;
+     [ObservableProperty] private LogItemTemplate _selectedDatabaseEntry = null!;
 
      [RelayCommand]
      private void DeleteButton()

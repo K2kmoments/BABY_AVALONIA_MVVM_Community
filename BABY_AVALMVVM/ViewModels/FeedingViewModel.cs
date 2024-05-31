@@ -41,16 +41,16 @@ public partial class FeedingViewModel : ViewModelBase
     [RelayCommand]
     private void SaveButtonPress()
     {
+        _feedingStopwatch.Stop();
         
-        
-        var entryToSave = new BabyLogDatabaseEntry()
+        var entryToSave = new LogItemTemplate()
         {
             Name = "Feeding",
-            FullDurationFed = BigSumTimerTextBlock,
-            LastSideFed = LastSideFedString,
+            Duration = BigSumTimerTextBlock,
+            Note = LastSideFedString,
             LogCreationDateTime = DateTime.Now,
-            
-            
+            IconKey = "FoodRegular",
+            IconPath = "/Assets/LogIcons/icons8-essen-50.png"
         };
         
         SqLiteHelper.SaveToDatabase(entryToSave);

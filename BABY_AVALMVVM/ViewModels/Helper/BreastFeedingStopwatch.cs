@@ -77,6 +77,13 @@ public class BreastFeedingStopwatch
        
     }
 
+    public void Stop()
+    {
+        _stopwatchRight.Stop();
+        _timerRight.Stop();
+        _stopwatchLeft.Stop();
+        _timerLeft.Stop();
+    }
     private void OnTimerLeftElapsed(object? sender, ElapsedEventArgs e)
     {
         Dispatcher.UIThread.Invoke(() =>

@@ -1,66 +1,264 @@
 <UserControl
-    Background="#454545"
+    Background="Black"
     d:DesignHeight="720"
     d:DesignWidth="1200"
     mc:Ignorable="d"
     x:Class="BABY_AVALONIA_MVVM.Views.PooPooView"
+    x:DataType="viewModels:PooPooViewModel"
     xmlns="https://github.com/avaloniaui"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:viewModels="clr-namespace:BABY_AVALONIA_MVVM.ViewModels"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-    <StackPanel Orientation="Vertical" Spacing="4">
-        <Label
-            Content="Choose PooPoo Colour"
-            FontSize="35"
-            Foreground="MistyRose"
-            HorizontalAlignment="Center" />
-        <Grid
-            ColumnDefinitions="Auto,*,Auto"
-            HorizontalAlignment="Stretch"
-            Margin="0,16,0,0"
-            MaxWidth="660">
-            <Button
-                Background="MistyRose"
-                Grid.Column="0"
-                Margin="4"
-                Name="left"
-                Padding="10,20"
-                VerticalAlignment="Center"
-                Width="50">
-                <Path Data="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" Fill="Black" />
-            </Button>
-            <Carousel Grid.Column="1" Name="carousel">
-                <Carousel.PageTransition>
-                    <PageSlide Duration="0.25" Orientation="Horizontal" />
-                </Carousel.PageTransition>
-                <Image Source="/Assets/PooPoo/brownPoo.png" />
-                <Image Source="/Assets/PooPoo/yellowPoo.png" />
-                <Image Source="/Assets/PooPoo/greenPoo.png" />
-                <Image Source="/Assets/PooPoo/orangePoo.png" />
-                <Image Source="/Assets/PooPoo/darkPoo.png" />
-            </Carousel>
-            <Button
-                Background="MistyRose"
-                Grid.Column="2"
-                Margin="4"
-                Name="right"
-                Padding="10,20"
-                VerticalAlignment="Center"
-                Width="50">
-                <Path Data="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z" Fill="Black" />
-            </Button>
-        </Grid>
-        <Button
-            Background="MistyRose"
-            Content="Save"
-            Height="50"
-            HorizontalAlignment="Center"
-            HorizontalContentAlignment="Center"
-            VerticalContentAlignment="Center"
-            Width="150" />
+    <Design.DataContext>
+        <!--
+            This only sets the DataContext for the previewer in an IDE,
+            to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs)
+        -->
+        <viewModels:PooPooViewModel />
+    </Design.DataContext>
+    <UserControl.Resources>
+        <viewModels:PooPooViewModel x:Key="Vm" />
+    </UserControl.Resources>
 
 
+    <Grid
+        ColumnDefinitions="2*,*"
+        Margin="10"
+        RowDefinitions="*,*">
+        <Border
+            Background="#454545"
+            CornerRadius="20"
+            Grid.Column="1"
+            Grid.RowSpan="2"
+            Margin="10,20,20,20">
+            <Grid RowDefinitions="100,*,Auto">
+                <TextBlock
+                    FontSize="20"
+                    Foreground="FloralWhite"
+                    Grid.Row="0"
+                    HorizontalAlignment="Center"
+                    Margin="0,40,0,0"
+                    Text="Your Selection"
+                    VerticalAlignment="Top" />
+                <StackPanel Grid.Row="1">
+                    <ListBox Background="Transparent">
+                        <Border
+                            Background="WhiteSmoke"
+                            CornerRadius="30"
+                            Margin="20,0,20,0">
+                            <StackPanel
+                                HorizontalAlignment="Stretch"
+                                Margin="10"
+                                Orientation="Horizontal">
+                                <StackPanel
+                                    Grid.Column="0"
+                                    Margin="20,0,0,0"
+                                    Orientation="Horizontal"
+                                    Spacing="20"
+                                    VerticalAlignment="Center">
+                                    <Image
+                                        Grid.Column="0"
+                                        HorizontalAlignment="Left"
+                                        Margin="0,0,0,0"
+                                        MaxHeight="50"
+                                        Source="/Assets/water-drop_10703023.png" />
+                                    <TextBlock
+                                        FontSize="15"
+                                        Margin="0,0,0,0"
+                                        Text="PeePee - Yellow"
+                                        VerticalAlignment="Center" />
+                                </StackPanel>
+
+                                <Button
+                                    Background="Transparent"
+                                    Grid.Column="2"
+                                    Margin="20,0,0,0">
+                                    <PathIcon Data="{StaticResource DeleteRegular}" />
+                                </Button>
+                            </StackPanel>
+                        </Border>
+                    </ListBox>
+                    <ListBox Background="Transparent">
+                        <Border
+                            Background="WhiteSmoke"
+                            CornerRadius="30"
+                            Margin="20,10,20,0">
+                            <StackPanel
+                                HorizontalAlignment="Stretch"
+                                Margin="10"
+                                Orientation="Horizontal">
+                                <StackPanel
+                                    Grid.Column="0"
+                                    Margin="20,0,0,0"
+                                    Orientation="Horizontal"
+                                    Spacing="20"
+                                    VerticalAlignment="Center">
+                                    <Image
+                                        Grid.Column="0"
+                                        HorizontalAlignment="Left"
+                                        Margin="0,0,0,0"
+                                        MaxHeight="50"
+                                        Source="/Assets/PooPoo/brownPoo.png" />
+                                    <TextBlock
+                                        FontSize="15"
+                                        Margin="0,0,0,0"
+                                        Text="PeePee - Yellow"
+                                        VerticalAlignment="Center" />
+                                </StackPanel>
+
+                                <Button
+                                    Background="Transparent"
+                                    Grid.Column="2"
+                                    Margin="20,0,0,0">
+                                    <PathIcon Data="{StaticResource DeleteRegular}" />
+                                </Button>
+                            </StackPanel>
+                        </Border>
+                    </ListBox>
+                </StackPanel>
+                <Button
+                    Background="WhiteSmoke"
+                    Content="Checkout"
+                    CornerRadius="10"
+                    Grid.Row="2"
+                    Height="50"
+                    HorizontalAlignment="Center"
+                    HorizontalContentAlignment="Center"
+                    Margin="0,0,0,20"
+                    Name="SaveButton"
+                    VerticalAlignment="Bottom"
+                    VerticalContentAlignment="Center"
+                    Width="250" />
+
+            </Grid>
+        </Border>
+        <Border
+            Background="PowderBlue"
+            CornerRadius="20"
+            Grid.Column="0"
+            Grid.Row="0"
+            Margin="20,20,10,0"
+            Name="PeePeeSection">
+            <Grid RowDefinitions="5*,*">
+                <StackPanel
+                    Orientation="Vertical"
+                    Spacing="4"
+                    VerticalAlignment="Center">
+
+                    <Grid
+                        ColumnDefinitions="Auto,*,Auto"
+                        HorizontalAlignment="Center"
+                        Margin="0,0,0,0"
+                        MaxWidth="150"
+                        VerticalAlignment="Center">
+
+                        <Carousel Grid.Column="1" Name="PeeCarousel">
+                            <Carousel.PageTransition>
+                                <PageSlide Duration="0.25" Orientation="Horizontal" />
+                            </Carousel.PageTransition>
+                            <Image Source="/Assets/PooPoo/WaterDropFace.png" />
+
+                        </Carousel>
+
+                    </Grid>
+
+                </StackPanel>
+                <Button
+                    Background="Transparent"
+                    BorderBrush="#252525"
+                    BorderThickness="1"
+                    Command="{Binding PeeSelectCommand}"
+                    Content="Select"
+                    CornerRadius="10"
+                    Grid.Row="1"
+                    Height="50"
+                    HorizontalAlignment="Center"
+                    HorizontalContentAlignment="Center"
+                    Margin="0,0,0,20"
+                    VerticalAlignment="Bottom"
+                    VerticalContentAlignment="Center"
+                    Width="150" />
+            </Grid>
+        </Border>
+        <Border
+            Background="WhiteSmoke"
+            CornerRadius="20"
+            Grid.Column="0"
+            Grid.Row="1"
+            Margin="20,20,10,20"
+            Name="PooPooSection">
+            <Grid RowDefinitions="5*,*">
+                <StackPanel
+                    Orientation="Vertical"
+                    Spacing="4"
+                    VerticalAlignment="Center">
+
+                    <Grid
+                        ColumnDefinitions="Auto,2*,Auto"
+                        HorizontalAlignment="Center"
+                        Margin="0,16,0,0"
+                        MaxWidth="300"
+                        VerticalAlignment="Center">
+                        <Button
+                            Background="Transparent"
+                            BorderBrush="#252525"
+                            BorderThickness="1"
+                            Grid.Column="0"
+                            Margin="0,0,15,0"
+                            Name="left"
+                            Padding="12,20"
+                            VerticalAlignment="Center"
+                            Width="50">
+                            <Path Data="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" Fill="Black" />
+                        </Button>
+                        <Carousel
+                            Grid.Column="1"
+                            Margin="0,0,0,0"
+                            Name="carousel">
+                            <Carousel.PageTransition>
+                                <PageSlide Duration="0.25" Orientation="Horizontal" />
+                            </Carousel.PageTransition>
+
+                            <Image Source="/Assets/PooPoo/brownPooface.png" />
+                            <Image Source="/Assets/PooPoo/yellowPooFace.png" />
+                            <Image Source="/Assets/PooPoo/greenPooface.png" />
+                            <Image Source="/Assets/PooPoo/orangePooface.png" />
+                            <Image Source="/Assets/PooPoo/yellowPooFace.png" />
 
 
-    </StackPanel>
+                        </Carousel>
+                        <Button
+                            Background="Transparent"
+                            BorderBrush="#252525"
+                            BorderThickness="1"
+                            Grid.Column="2"
+                            Margin="15,0,0,0"
+                            Name="right"
+                            Padding="10,20"
+                            VerticalAlignment="Center"
+                            Width="50">
+                            <Path Data="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z" Fill="Black" />
+                        </Button>
+                    </Grid>
+
+                </StackPanel>
+                <Button
+                    Background="Transparent"
+                    BorderBrush="#252525"
+                    BorderThickness="1"
+                    Content="Select"
+                    CornerRadius="10"
+                    Grid.Row="1"
+                    Height="50"
+                    HorizontalAlignment="Center"
+                    HorizontalContentAlignment="Center"
+                    Margin="0,0,0,20"
+                    VerticalAlignment="Bottom"
+                    VerticalContentAlignment="Center"
+                    Width="150" />
+            </Grid>
+        </Border>
+    </Grid>
+
 </UserControl>

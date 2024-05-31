@@ -18,19 +18,20 @@ public static class SqLiteHelper
     #endregion
 
    
-    public static BabyLogDatabaseEntry? FeedingLogEntry { get; set; }
+    //public static BabyLogDatabaseEntry? FeedingLogEntry { get; set; }
+    public static LogItemTemplate? LogItemTemplate { get; set; }
 
-    public static void SaveToDatabase(BabyLogDatabaseEntry babyLogDatabaseEntry)
+    public static void SaveToDatabase(LogItemTemplate babyLogDatabaseEntry)
     {
         
         using (SQLiteConnection connection = new SQLiteConnection(DatabasePath))
         {
-            connection.CreateTable<BabyLogDatabaseEntry>();
+            connection.CreateTable<LogItemTemplate>();
             connection.Insert(babyLogDatabaseEntry);
         }
     }
 
-    public static void DeleteEntryInDatabase(BabyLogDatabaseEntry selectedDatabaseEntry)
+    public static void DeleteEntryInDatabase(LogItemTemplate selectedDatabaseEntry)
     {
         using (SQLiteConnection connection = new SQLiteConnection(DatabasePath))
         {
@@ -39,17 +40,15 @@ public static class SqLiteHelper
         }
     }
 
-    public static List<BabyLogDatabaseEntry>? ReadFeedingLogEntriesFromDatabase()
+    public static List<LogItemTemplate>? ReadFeedingLogEntriesFromDatabase()
     {
         
+        List<LogItemTemplate>? feedingLogInTable;
         
-        List<BabyLogDatabaseEntry>? feedingLogInTable;
-        
-
         using (SQLiteConnection connection = new SQLiteConnection(DatabasePath))
         {
-            connection.CreateTable<BabyLogDatabaseEntry>();
-            feedingLogInTable = connection.Table<BabyLogDatabaseEntry>().ToList();
+            connection.CreateTable<LogItemTemplate>();
+            feedingLogInTable = connection.Table<LogItemTemplate>().ToList();
         }
 
         return feedingLogInTable;

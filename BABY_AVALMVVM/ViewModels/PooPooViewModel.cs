@@ -1,6 +1,13 @@
+using CommunityToolkit.Mvvm.Input;
+
 namespace BABY_AVALONIA_MVVM.ViewModels;
 
-public class PooPooViewModel : ViewModelBase
+public partial class PooPooViewModel : ViewModelBase
 {
+    [RelayCommand]
+    private void PeeSelect()
+    {
+        //
+    }
     
 }

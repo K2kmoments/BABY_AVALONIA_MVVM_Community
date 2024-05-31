@@ -1,5 +1,5 @@
 <UserControl
-    Background="#454545"
+    Background="Black"
     d:DesignHeight="620"
     d:DesignWidth="1200"
     mc:Ignorable="d"
@@ -23,69 +23,115 @@
 
 
 
-    <Grid Margin="10">
-
-        <Grid ColumnDefinitions="*,*" RowDefinitions="*,2*">
-            <StackPanel Grid.ColumnSpan="2" HorizontalAlignment="Center">
-                <TextBlock
-                    FontSize="100"
-                    Foreground="MistyRose"
-                    Margin="0,50,0,0"
-                    Text="{Binding BigSumTimerTextBlock}" />
-                <Button
-                    Background="MistyRose"
-                    Command="{Binding SaveButtonPressCommand}"
-                    Content="Save"
-                    Height="30"
+    <Grid ColumnDefinitions="*,2*" Margin="10">
+        <Border
+            Background="White"
+            CornerRadius="20"
+            Grid.Column="0"
+            Margin="10">
+            <Grid Margin="20,0,20,0" RowDefinitions="*,2*">
+                <StackPanel
                     HorizontalAlignment="Center"
-                    HorizontalContentAlignment="Center"
-                    Margin="0,150,0,0"
-                    VerticalContentAlignment="Center"
-                    Width="150" />
-            </StackPanel>
+                    Margin="80,10,80,0"
+                    Spacing="10"
+                    VerticalAlignment="Center">
+                    <TextBlock
+                        FontFamily="Serif"
+                        FontSize="15"
+                        FontStyle="Italic"
+                        FontWeight="Light"
+                        Text="While breastfeeding may not seem the right choice for every parent, it is the best choice for every baby"
+                        TextAlignment="Center"
+                        TextWrapping="Wrap" />
+                    <TextBlock
+                        FontWeight="Black"
+                        HorizontalAlignment="Center"
+                        Text="-Amy Spangler" />
+                </StackPanel>
 
-            <!--  LINKS  -->
-            <Grid
-                Grid.Column="0"
-                Grid.Row="1"
-                Grid.RowDefinitions="*,2*,*"
-                HorizontalAlignment="Center"
-                Name="LinkesGrid">
-
-                <Button
-                    Background="MistyRose"
-                    Command="{Binding LeftButtonPressCommand}"
-                    Content="{Binding LeftTimerButtonText}"
-                    CornerRadius="250"
-                    FontSize="30"
+                <Image
                     Grid.Row="1"
-                    Height="250"
-                    HorizontalContentAlignment="Center"
-                    Name="LeftButton"
-                    VerticalContentAlignment="Center"
-                    Width="250" />
+                    Source="/Assets/breastMom.jpg"
+                    VerticalAlignment="Bottom" />
             </Grid>
 
-            <!--  RECHTS  -->
+        </Border>
+        <Border
+            Background="#454545"
+            CornerRadius="20"
+            Grid.Column="1"
+            Margin="10">
             <Grid
+                ColumnDefinitions="*,*"
                 Grid.Column="1"
-                Grid.Row="1"
-                Grid.RowDefinitions="*,2*,*"
-                HorizontalAlignment="Center"
-                Name="RechtesGrid">
-                <Button
-                    Background="MistyRose"
-                    Command="{Binding RightButtonPressCommand}"
-                    Content="{Binding RightTimerButtonText}"
-                    CornerRadius="250"
-                    FontSize="30"
-                    Grid.Row="1"
-                    Height="250"
-                    HorizontalContentAlignment="Center"
-                    VerticalContentAlignment="Center"
-                    Width="250" />
-            </Grid>
-        </Grid>
+                RowDefinitions="*,2*">
 
+                <StackPanel Grid.ColumnSpan="2" HorizontalAlignment="Center">
+                    <TextBlock
+                        FontSize="130"
+                        Foreground="MistyRose"
+                        Margin="0,50,0,0"
+                        Text="{Binding BigSumTimerTextBlock}" />
+                    <Button
+                        Background="MistyRose"
+                        Command="{Binding SaveButtonPressCommand}"
+                        Content="Save"
+                        CornerRadius="20"
+                        Height="50"
+                        HorizontalAlignment="Center"
+                        HorizontalContentAlignment="Center"
+                        Margin="0,10,0,0"
+                        VerticalContentAlignment="Center"
+                        Width="350" />
+                </StackPanel>
+
+                <!--  LINKS  -->
+                <Grid
+                    Grid.Column="0"
+                    Grid.Row="1"
+                    Grid.RowDefinitions="*,2*,*"
+                    HorizontalAlignment="Center"
+                    Name="LinkesGrid"
+                    VerticalAlignment="Center">
+
+                    <Button
+                        Background="MistyRose"
+                        Command="{Binding LeftButtonPressCommand}"
+                        Content="{Binding LeftTimerButtonText}"
+                        CornerRadius="250"
+                        FontSize="30"
+                        Grid.Row="1"
+                        Height="200"
+                        HorizontalContentAlignment="Center"
+                        Margin="0,40,0,0"
+                        Name="LeftButton"
+                        VerticalContentAlignment="Center"
+                        Width="200" />
+                </Grid>
+
+                <!--  RECHTS  -->
+                <Grid
+                    Grid.Column="1"
+                    Grid.Row="1"
+                    Grid.RowDefinitions="*,2*,*"
+                    HorizontalAlignment="Center"
+                    Name="RechtesGrid"
+                    VerticalAlignment="Center">
+                    <Button
+                        Background="MistyRose"
+                        Command="{Binding RightButtonPressCommand}"
+                        Content="{Binding RightTimerButtonText}"
+                        CornerRadius="250"
+                        FontSize="30"
+                        Grid.Row="1"
+                        Height="200"
+                        HorizontalContentAlignment="Center"
+                        Margin="0,40,0,0"
+                        VerticalContentAlignment="Center"
+                        Width="200" />
+                </Grid>
+
+            </Grid>
+        </Border>
     </Grid>
 </UserControl>

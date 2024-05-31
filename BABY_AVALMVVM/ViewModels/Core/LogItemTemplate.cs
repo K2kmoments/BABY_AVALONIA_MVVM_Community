@@ -2,22 +2,24 @@ using System;
 using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Media;
+using SQLite;
 
 namespace BABY_AVALONIA_MVVM.ViewModels;
 
 public class LogItemTemplate
 {
-    public LogItemTemplate(Type modelType, string visibleName, string iconKey)
+    public LogItemTemplate()
     {
-        LogEntryType = modelType;
-        Label = visibleName;
-
-        // Find the Icon by Key and Add it
-        Application.Current!.TryFindResource(iconKey, out var res);
-        LogItemIcon = (StreamGeometry)res!;
+       
     }
-
-    public string Label { get; }
-    public Type LogEntryType { get; }
-    public StreamGeometry LogItemIcon { get; set; }
+    [PrimaryKey,AutoIncrement]
+    public int Id { get; set; }
+    public string? Name { get; set; }
+    
+    public string? IconPath { get; set; }
+    public DateTime LogCreationDateTime { get; set; }
+    public string? Duration { get; set; }
+    public string? Note { get; set; }
+    public string? IconKey { get; set; }
+    
 }
