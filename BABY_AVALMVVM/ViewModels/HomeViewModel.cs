@@ -28,6 +28,7 @@ public partial class HomeViewModel : ViewModelBase
      private void RefreshDb()
      {
           FeedingDatabaseEntries = SqLiteHelper.ReadFeedingLogEntriesFromDatabase();
+         
      }
      public HomeViewModel()
      {

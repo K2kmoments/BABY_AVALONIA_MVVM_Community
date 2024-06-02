@@ -1,6 +1,4 @@
 using System;
-using Avalonia.Media;
-using BABY_AVALONIA_MVVM.Models;
 using BABY_AVALONIA_MVVM.ViewModels.Helper;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;

@@ -8,6 +8,8 @@
     xmlns="https://github.com/avaloniaui"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:models="using:BABY_AVALONIA_MVVM.Models"
+    xmlns:models1="clr-namespace:BABY_AVALMVVM.Models"
     xmlns:viewModels="clr-namespace:BABY_AVALONIA_MVVM.ViewModels"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <Design.DataContext>
@@ -43,9 +45,9 @@
                     Text="Your Selection"
                     VerticalAlignment="Top" />
                 <StackPanel Grid.Row="1">
-                    <ListBox Background="Transparent">
+                    <ListBox Background="Transparent" ItemsSource="{Binding PooPooItemList}">
                         <ListBox.ItemTemplate>
-                            <DataTemplate>
+                            <DataTemplate DataType="models1:PooPooItem">
                                 <Border
                                     Background="WhiteSmoke"
                                     CornerRadius="30"
@@ -54,77 +56,32 @@
                                         HorizontalAlignment="Stretch"
                                         Margin="10"
                                         Orientation="Horizontal">
-                                        <StackPanel
-                                            Grid.Column="0"
-                                            Margin="20,0,0,0"
-                                            Orientation="Horizontal"
-                                            Spacing="20"
-                                            VerticalAlignment="Center">
-                                            <Image
-                                                Grid.Column="0"
-                                                HorizontalAlignment="Left"
-                                                Margin="0,0,0,0"
-                                                MaxHeight="50"
-                                                Source="/Assets/Pictures/water-drop_10703023.png" />
-                                            <TextBlock
-                                                FontSize="15"
-                                                Margin="0,0,0,0"
-                                                Text="PeePee - Yellow"
-                                                VerticalAlignment="Center" />
-                                        </StackPanel>
-
-                                        <Button
+                                        <PathIcon
                                             Background="Transparent"
+                                            Data="{StaticResource LineHorizontal3Regular}"
                                             Grid.Column="2"
-                                            Margin="20,0,0,0">
-                                            <PathIcon Data="{StaticResource DeleteRegular}" />
-                                        </Button>
+                                            Margin="20,0,0,0" />
+                                        <Image
+                                            Grid.Column="0"
+                                            HorizontalAlignment="Left"
+                                            Margin="0,0,0,0"
+                                            MaxHeight="50"
+                                            Source="{Binding Icon}" />
+                                        <TextBlock
+                                            FontSize="15"
+                                            Margin="0,0,0,0"
+                                            Text="{Binding Name}"
+                                            VerticalAlignment="Center" />
                                     </StackPanel>
                                 </Border>
                             </DataTemplate>
                         </ListBox.ItemTemplate>
                     </ListBox>
-                    <ListBox Background="Transparent">
-                        <Border
-                            Background="WhiteSmoke"
-                            CornerRadius="30"
-                            Margin="20,10,20,0">
-                            <StackPanel
-                                HorizontalAlignment="Stretch"
-                                Margin="10"
-                                Orientation="Horizontal">
-                                <StackPanel
-                                    Grid.Column="0"
-                                    Margin="20,0,0,0"
-                                    Orientation="Horizontal"
-                                    Spacing="20"
-                                    VerticalAlignment="Center">
-                                    <Image
-                                        Grid.Column="0"
-                                        HorizontalAlignment="Left"
-                                        Margin="0,0,0,0"
-                                        MaxHeight="50"
-                                        Source="/Assets/PooPoo/brownPoo.png" />
-                                    <TextBlock
-                                        FontSize="15"
-                                        Margin="0,0,0,0"
-                                        Text="PeePee - Yellow"
-                                        VerticalAlignment="Center" />
-                                </StackPanel>
-
-                                <Button
-                                    Background="Transparent"
-                                    Grid.Column="2"
-                                    Margin="20,0,0,0">
-                                    <PathIcon Data="{StaticResource DeleteRegular}" />
-                                </Button>
-                            </StackPanel>
-                        </Border>
-                    </ListBox>
                 </StackPanel>
                 <Button
                     Background="WhiteSmoke"
-                    Content="Checkout"
+                    Command="{Binding SaveButtonPressCommand}"
+                    Content="Save"
                     CornerRadius="10"
                     Grid.Row="2"
                     Height="50"
@@ -252,6 +209,7 @@
                     Background="Transparent"
                     BorderBrush="#252525"
                     BorderThickness="1"
+                    Command="{Binding PooPooSelectCommand}"
                     Content="Select"
                     CornerRadius="10"
                     Grid.Row="1"
