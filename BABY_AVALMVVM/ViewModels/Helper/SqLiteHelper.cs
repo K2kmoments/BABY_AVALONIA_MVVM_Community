@@ -35,7 +35,7 @@ public static class SqLiteHelper
     {
         using (SQLiteConnection connection = new SQLiteConnection(DatabasePath))
         {
-            connection.CreateTable<BabyLogDatabaseEntry>();
+            connection.CreateTable<LogItemTemplate>();
             connection.Delete(selectedDatabaseEntry);
         }
     }

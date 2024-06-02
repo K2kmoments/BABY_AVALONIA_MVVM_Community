@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BABY_AVALMVVM")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2970f3fde9cdf756aa95e879ee82131aa1298215")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ca40982320e59570295ead3f51a9290a1e74f5a6")]
 [assembly: System.Reflection.AssemblyProductAttribute("BABY_AVALMVVM")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BABY_AVALMVVM")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
