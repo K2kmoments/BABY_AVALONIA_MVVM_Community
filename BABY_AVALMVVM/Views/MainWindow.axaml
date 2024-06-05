@@ -7,10 +7,12 @@
     d:DesignWidth="1280"
     mc:Ignorable="d"
     x:Class="BABY_AVALONIA_MVVM.Views.MainWindow"
-    x:DataType="vm:MainWindowViewModel"
+    x:DataType="viewModels:MainWindowViewModel"
     xmlns="https://github.com/avaloniaui"
+    xmlns:core="clr-namespace:BABY_AVALONIA_MVVM.ViewModels.Core"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:viewModels="clr-namespace:BABY_AVALONIA_MVVM.ViewModels"
     xmlns:vm="using:BABY_AVALONIA_MVVM.ViewModels"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
@@ -19,7 +21,7 @@
             This only sets the DataContext for the previewer in an IDE,
             to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs)
         -->
-        <vm:MainWindowViewModel />
+        <viewModels:MainWindowViewModel />
     </Design.DataContext>
 
     <SplitView
@@ -47,7 +49,7 @@
                     ItemsSource="{Binding PagesInNavigation}"
                     SelectedItem="{Binding SelectedListItem}">
                     <ListBox.ItemTemplate>
-                        <DataTemplate DataType="{x:Type vm:NavItemTemplate}">
+                        <DataTemplate DataType="{x:Type core:NavItemTemplate}">
                             <StackPanel Orientation="Horizontal" Spacing="15">
                                 <PathIcon Data="{Binding ListItemIcon}" Foreground="MistyRose" />
                                 <Label Content="{Binding VisibleName}" Foreground="MistyRose" />

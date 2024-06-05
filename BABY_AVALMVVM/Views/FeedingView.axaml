@@ -4,21 +4,22 @@
     d:DesignWidth="1200"
     mc:Ignorable="d"
     x:Class="BABY_AVALONIA_MVVM.Views.FeedingView"
-    x:DataType="viewModels:FeedingViewModel"
+    x:DataType="viewModels1:FeedingViewModel"
     xmlns="https://github.com/avaloniaui"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:viewModels="clr-namespace:BABY_AVALONIA_MVVM.ViewModels"
+    xmlns:viewModels1="clr-namespace:BABY_AVALONIA_MVVM.ViewModels"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <Design.DataContext>
         <!--
             This only sets the DataContext for the previewer in an IDE,
             to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs)
         -->
-        <viewModels:FeedingViewModel />
+        <viewModels1:FeedingViewModel />
     </Design.DataContext>
     <UserControl.Resources>
-        <viewModels:FeedingViewModel x:Key="Vm" />
+        <viewModels1:FeedingViewModel x:Key="Vm" />
     </UserControl.Resources>
 
 

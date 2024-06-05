@@ -3,7 +3,7 @@ using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Media;
 
-namespace BABY_AVALONIA_MVVM.ViewModels;
+namespace BABY_AVALONIA_MVVM.ViewModels.Core;
 
 public class NavItemTemplate
 {

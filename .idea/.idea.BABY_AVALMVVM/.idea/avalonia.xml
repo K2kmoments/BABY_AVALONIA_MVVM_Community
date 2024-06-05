@@ -5,6 +5,8 @@
       <map>
         <entry key="BABY_AVALMVVM/App.axaml" value="BABY_AVALMVVM/BABY_AVALMVVM.csproj" />
         <entry key="BABY_AVALMVVM/Assets/Icons.axaml" value="BABY_AVALMVVM/BABY_AVALMVVM.csproj" />
+        <entry key="BABY_AVALMVVM/Assets/Images.axaml" value="BABY_AVALMVVM/BABY_AVALMVVM.csproj" />
+        <entry key="BABY_AVALMVVM/Assets/ImagesTest.axaml" value="BABY_AVALMVVM/BABY_AVALMVVM.csproj" />
         <entry key="BABY_AVALMVVM/Views/DoctorView.axaml" value="BABY_AVALMVVM/BABY_AVALMVVM.csproj" />
         <entry key="BABY_AVALMVVM/Views/ExerciseView.axaml" value="BABY_AVALMVVM/BABY_AVALMVVM.csproj" />
         <entry key="BABY_AVALMVVM/Views/FeedingView.axaml" value="BABY_AVALMVVM/BABY_AVALMVVM.csproj" />

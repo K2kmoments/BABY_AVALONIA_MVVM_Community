@@ -2,12 +2,13 @@
     RequestedThemeVariant="Light"
     x:Class="BABY_AVALONIA_MVVM.App"
     xmlns="https://github.com/avaloniaui"
+    xmlns:babyAvalmvvm="clr-namespace:BABY_AVALONIA_MVVM"
     xmlns:local="using:BABY_AVALONIA_MVVM"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <!--  "Default" ThemeVariant follows system theme variant. "Dark" or "Light" are other available options.  -->
 
     <Application.DataTemplates>
-        <local:ViewLocator />
+        <babyAvalmvvm:ViewLocator />
     </Application.DataTemplates>
 
     <Application.Styles>

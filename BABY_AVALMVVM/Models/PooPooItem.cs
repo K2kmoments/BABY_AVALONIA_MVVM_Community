@@ -1,13 +1,13 @@
-namespace BABY_AVALMVVM.Models;
+namespace BABY_AVALONIA_MVVM.Models;
 
 public class PooPooItem
 {
     public string? Name { get; set; }
-    public string? Icon { get; set; }
+    public string? IconString { get; set; }
 
-    public PooPooItem(string? name, string? icon)
+    public PooPooItem(string? name)
     {
         Name = name;
-        Icon = icon;
+        
     }
 }

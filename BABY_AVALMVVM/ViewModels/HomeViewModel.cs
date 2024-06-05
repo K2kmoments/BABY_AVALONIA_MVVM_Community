@@ -1,9 +1,6 @@
-using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Threading;
-using Avalonia.Controls;
-using BABY_AVALONIA_MVVM.Models;
+using BABY_AVALONIA_MVVM.ViewModels.Core;
+using BABY_AVALONIA_MVVM.ViewModels;
 using BABY_AVALONIA_MVVM.ViewModels.Helper;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
@@ -20,9 +17,13 @@ public partial class HomeViewModel : ViewModelBase
      [RelayCommand]
      private void DeleteButton()
      {
-          SqLiteHelper.DeleteEntryInDatabase(SelectedDatabaseEntry);
-          //refresh
-          RefreshDb();
+          if (SelectedDatabaseEntry != null)
+          {
+               SqLiteHelper.DeleteEntryInDatabase(SelectedDatabaseEntry);
+               //refresh
+               RefreshDb();
+          }
+
      }
 
      private void RefreshDb()

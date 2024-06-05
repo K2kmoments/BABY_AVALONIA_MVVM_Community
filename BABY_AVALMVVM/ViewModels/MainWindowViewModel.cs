@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.ObjectModel;
+using BABY_AVALONIA_MVVM.ViewModels.Core;
+using BABY_AVALONIA_MVVM.ViewModels;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 

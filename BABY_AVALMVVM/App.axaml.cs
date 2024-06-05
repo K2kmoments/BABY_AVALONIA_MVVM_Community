@@ -5,6 +5,7 @@ using Avalonia.Data.Core.Plugins;
 using Avalonia.Markup.Xaml;
 using BABY_AVALONIA_MVVM.ViewModels;
 using BABY_AVALONIA_MVVM.Views;
+using MainWindowViewModel = BABY_AVALONIA_MVVM.ViewModels.MainWindowViewModel;
 
 namespace BABY_AVALONIA_MVVM;
 
